@@ -9,6 +9,16 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
+  #bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.4; /* Adjust for desired visibility */
+}
     .navbar {
   position: fixed;
   top: 0;
@@ -109,6 +119,10 @@ body {
   </style>
 </head>
 <body>
+  <video autoplay muted loop id="bg-video">
+  <source src="baking.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
   <nav class="navbar">
   <ul>
     <li><a href="index.html">Home</a></li>
