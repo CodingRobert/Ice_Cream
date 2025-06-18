@@ -2,96 +2,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ice Creams - Dolcidea</title>
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
   <style>
+    /* Background video styling */
+    #bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.4; /* Adjust for desired visibility */
+    }
+
     .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: #f5f5f5;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
+    .navbar ul li a {
+      text-decoration: none;
+      color: #f5f5f5;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
 
-.navbar ul li a:hover {
-  color: #d4af37;
-}
-
-body {
-  padding-top: 80px; /* To prevent navbar from overlapping content */
-}
+    .navbar ul li a:hover {
+      color: #d4af37;
+    }
 
     body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f5f5f5;
+      padding-top: 80px; /* To prevent navbar from overlapping content */
+      font-family: "Quicksand", sans-serif;
+      background-color: rgba(255, 255, 255, 0.3);
       margin: 0;
       padding: 2rem;
     }
+
+    h1 {
+      font-family: "Great Vibes", cursive;
+      font-size: 4rem;
+      color: #2f2f2f;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-shadow: -1px -1px 0 #d4af37, 1px -1px 0 #d4af37, -1px 1px 0 #d4af37,
+        1px 1px 0 #d4af37;
+      user-select: none;
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+      text-shadow: -1px -1px 0 #d4af37, 1px -1px 0 #d4af37, -1px 1px 0 #d4af37,
+        1px 1px 0 #d4af37;
+    }
+
     .menu-section {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
     }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      color: #2f2f2f;
-      text-align: center;
-      margin-bottom: 2rem;
-      text-shadow:
-        -1px -1px 0 #d4af37,
-         1px -1px 0 #d4af37,
-        -1px  1px 0 #d4af37,
-         1px  1px 0 #d4af37;
-      user-select: none;
-    }
-    h2 {
-  margin-bottom: 0.5rem;
-  text-shadow:
-    -1px -1px 0 #d4af37,
-     1px -1px 0 #d4af37,
-    -1px  1px 0 #d4af37,
-     1px  1px 0 #d4af37;
-}
+
     .menu-item {
       display: flex;
       background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       max-width: 800px;
       border-radius: 12px;
       overflow: hidden;
     }
+
     .menu-item:nth-child(even) {
       flex-direction: row-reverse;
     }
+
     .menu-img {
       width: 50%;
       object-fit: cover;
     }
+
     .menu-desc {
       padding: 1.5rem;
       display: flex;
@@ -99,82 +112,131 @@ body {
       justify-content: center;
       width: 50%;
     }
-    h2 {
-      margin-bottom: 0.5rem;
-    }
   </style>
 </head>
 <body>
   <video autoplay muted loop id="bg-video">
-  <source src="ice_cream.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+    <source src="ice_cream.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
   <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="cakes.html">Cakes</a></li>
-    <li><a href="icecreams.html">Ice Creams</a></li>
-    <li><a href="reservations.html">Reservations</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About Us</a></li>
-  </ul>
-</nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="icecreams.html">Ice Creams</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
   <h1>Ice Cream Menu</h1>
+
   <section class="menu-section">
     <div class="menu-item">
-      <img class="menu-img" src="Vanilla_Ice_Cream.jpg" alt="Vanilla Ice Cream">
+      <img class="menu-img" src="Vanilla_Ice_Cream.jpg" alt="Vanilla Ice Cream" />
       <div class="menu-desc">
         <h2>Classic Vanilla</h2>
-        <p>Savor the classic, creamy delight of our Vanilla Ice Cream, made with pure vanilla beans and fresh cream for an irresistibly smooth texture.
-          Each scoop melts gently on your tongue, offering a perfect balance of rich, sweet vanilla flavor and velvety softness. Crafted with simple,
-          high-quality ingredients, this timeless treat brings comfort and joy in every bite. Whether enjoyed alone or paired with your favorite dessert,
-          our Vanilla Ice Cream is a refreshing indulgence that satisfies cravings and brightens any moment. Experience the pure essence of vanilla
-          in every creamy spoonful.</p>
+        <p>
+          Savor the classic, creamy delight of our Vanilla Ice Cream, made with
+          pure vanilla beans and fresh cream for an irresistibly smooth texture.
+          Each scoop melts gently on your tongue, offering a perfect balance of
+          rich, sweet vanilla flavor and velvety softness. Crafted with simple,
+          high-quality ingredients, this timeless treat brings comfort and joy
+          in every bite. Whether enjoyed alone or paired with your favorite
+          dessert, our Vanilla Ice Cream is a refreshing indulgence that
+          satisfies cravings and brightens any moment. Experience the pure
+          essence of vanilla in every creamy spoonful.
+        </p>
       </div>
     </div>
+
     <div class="menu-item">
-      <img class="menu-img" src="Pistachio_Ice_Cream.jpg" alt="Pistachio Ice Cream">
+      <img
+        class="menu-img"
+        src="Pistachio_Ice_Cream.jpg"
+        alt="Pistachio Ice Cream"
+      />
       <div class="menu-desc">
         <h2>Pistachio</h2>
-        <p>Discover the nutty elegance of our Pistachio Ice Cream, where creamy richness meets the distinct, subtly sweet flavor of roasted pistachios.
-          Made with premium pistachio nuts and fresh cream, this ice cream boasts a smooth, luxurious texture with just the right amount of natural crunch.
-          Its delicate green hue invites you to enjoy a sophisticated treat that’s both refreshing and indulgent. Perfect for those seeking a unique,
-          flavorful dessert, our Pistachio Ice Cream offers a harmonious blend of creamy sweetness and earthy nuttiness in every spoonful.
-          A true delight for nut lovers.</p>
+        <p>
+          Discover the nutty elegance of our Pistachio Ice Cream, where creamy
+          richness meets the distinct, subtly sweet flavor of roasted
+          pistachios. Made with premium pistachio nuts and fresh cream, this ice
+          cream boasts a smooth, luxurious texture with just the right amount of
+          natural crunch. Its delicate green hue invites you to enjoy a
+          sophisticated treat that’s both refreshing and indulgent. Perfect for
+          those seeking a unique, flavorful dessert, our Pistachio Ice Cream
+          offers a harmonious blend of creamy sweetness and earthy nuttiness in
+          every spoonful. A true delight for nut lovers.
+        </p>
       </div>
     </div>
-     <div class="menu-item">
-      <img class="menu-img" src="Chocolate_Ice_Cream.jpg" alt="Vanilla Ice Cream">
+
+    <div class="menu-item">
+      <img
+        class="menu-img"
+        src="Chocolate_Ice_Cream.jpg"
+        alt="Vanilla Ice Cream"
+      />
       <div class="menu-desc">
         <h2>Chocolate</h2>
-        <p> Indulge in the rich, velvety goodness of our Chocolate Ice Cream — a timeless favorite made with premium cocoa and fresh cream.
-          Each spoonful offers a deep, satisfying chocolate flavor with a luxuriously smooth texture that melts in your mouth. Crafted in
-          small batches to preserve its intense taste and creamy consistency, it’s the ultimate treat for true chocolate lovers. Whether enjoyed
-          alone or paired with other desserts, this classic flavor never fails to delight. Pure, bold, and perfectly sweet, our Chocolate Ice Cream
-          is a comforting and indulgent escape in every bite.
+        <p>
+          Indulge in the rich, velvety goodness of our Chocolate Ice Cream — a
+          timeless favorite made with premium cocoa and fresh cream. Each
+          spoonful offers a deep, satisfying chocolate flavor with a luxuriously
+          smooth texture that melts in your mouth. Crafted in small batches to
+          preserve its intense taste and creamy consistency, it’s the ultimate
+          treat for true chocolate lovers. Whether enjoyed alone or paired with
+          other desserts, this classic flavor never fails to delight. Pure,
+          bold, and perfectly sweet, our Chocolate Ice Cream is a comforting and
+          indulgent escape in every bite.
         </p>
       </div>
     </div>
-     <div class="menu-item">
-      <img class="menu-img" src="Nutella_Ice_Cream.jpg" alt="Vanilla Ice Cream">
+
+    <div class="menu-item">
+      <img
+        class="menu-img"
+        src="Nutella_Ice_Cream.jpg"
+        alt="Vanilla Ice Cream"
+      />
       <div class="menu-desc">
         <h2>Nutella</h2>
-        <p>reat yourself to the irresistible taste of our Nutella Ice Cream, where creamy hazelnut spread meets rich chocolate in a dreamy frozen dessert.
-          Made with real Nutella and fresh ingredients, this smooth and decadent ice cream delivers the beloved hazelnut-chocolate flavor you know and
-          love in every spoonful. Its silky texture and nutty sweetness make it a standout choice for those craving something uniquely indulgent.
-          Swirled with ribbons of Nutella for an extra touch of delight, this flavor is pure bliss — perfect for chocolate lovers, hazelnut fans,
-          or anyone who appreciates a luxurious ice cream experience.
+        <p>
+          Treat yourself to the irresistible taste of our Nutella Ice Cream,
+          where creamy hazelnut spread meets rich chocolate in a dreamy frozen
+          dessert. Made with real Nutella and fresh ingredients, this smooth and
+          decadent ice cream delivers the beloved hazelnut-chocolate flavor you
+          know and love in every spoonful. Its silky texture and nutty sweetness
+          make it a standout choice for those craving something uniquely
+          indulgent. Swirled with ribbons of Nutella for an extra touch of
+          delight, this flavor is pure bliss — perfect for chocolate lovers,
+          hazelnut fans, or anyone who appreciates a luxurious ice cream
+          experience.
         </p>
       </div>
     </div>
-     <div class="menu-item">
-      <img class="menu-img" src="Lemon_Ice_Cream.jpg" alt="Vanilla Ice Cream">
+
+    <div class="menu-item">
+      <img
+        class="menu-img"
+        src="Lemon_Ice_Cream.jpg"
+        alt="Vanilla Ice Cream"
+      />
       <div class="menu-desc">
         <h2>Lemon</h2>
-        <p>Refresh your palate with our bright and tangy Lemon Ice Cream, a zesty twist on traditional frozen treats. Made with real lemon juice and zest,
-          it offers a naturally fresh flavor with just the right balance of sweetness and citrus. Light, creamy, and perfectly smooth, this ice cream is
-          ideal for warm days or as a refreshing finish to any meal. Its clean, uplifting taste awakens the senses and leaves a cool, invigorating impression.
-          Simple yet sophisticated, our Lemon Ice Cream brings a touch of sunshine to every scoop — a truly revitalizing dessert experience.
+        <p>
+          Refresh your palate with our bright and tangy Lemon Ice Cream, a
+          zesty twist on traditional frozen treats. Made with real lemon juice
+          and zest, it offers a naturally fresh flavor with just the right
+          balance of sweetness and citrus. Light, creamy, and perfectly smooth,
+          this ice cream is ideal for warm days or as a refreshing finish to any
+          meal. Its clean, uplifting taste awakens the senses and leaves a cool,
+          invigorating impression. Simple yet sophisticated, our Lemon Ice
+          Cream brings a touch of sunshine to every scoop — a truly
+          revitalizing dessert experience.
         </p>
       </div>
     </div>
