@@ -1,36 +1,45 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dolcidea</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Dolcidea</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
+    body {
       font-family: 'Quicksand', sans-serif;
-      background-color: #f5f5f5;
-      color: #2f2f2f;
-      scroll-behavior: smooth;
+      margin: 0;
+      background: #f5f5f5;
     }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.85);
+    .hero {
       display: flex;
+      height: 100vh;
+      align-items: center;
       justify-content: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
+      padding: 2rem;
     }
-
-    nav ul {
-      d
+    .hero img {
+      width: 50%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .text {
+      width: 50%;
+      padding-right: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="text">
+      <h1>About Dolcidea</h1>
+      <p>At Dolcidea, we believe in the magic of tradition blended with creativity. Founded in 1985, our gelateria has become a beloved destination for those seeking artisanal desserts made with passion and love. From creamy gelato to custom celebration cakes, every bite tells a story of dedication and quality.</p>
+    </div>
+    <img src="about-image.jpg" alt="Gelateria Interior">
+  </section>
+</body>
+</html>
