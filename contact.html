@@ -2,105 +2,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Dolcidea</title>
   <style>
-    /* Navbar styles */
     .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      display: flex;
-      justify-content: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
-    .navbar ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-    }
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
 
-    .navbar ul li a {
-      text-decoration: none;
-      color: #f5f5f5;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
+.navbar ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
 
-    .navbar ul li a:hover {
-      color: #d4af37;
-    }
+.navbar ul li a:hover {
+  color: #d4af37;
+}
 
-    /* Reset and base styles */
-    html, body {
+body {
+  padding-top: 80px; /* To prevent navbar from overlapping content */
+}
+
+    body, html {
       margin: 0;
       height: 100%;
       font-family: 'Quicksand', sans-serif;
-      padding-top: 80px; /* To avoid navbar overlap */
-      background: #000; /* fallback background */
     }
-
-    /* Hero section */
     .hero {
       position: relative;
-      height: calc(100vh - 80px);
-      overflow: hidden;
+      height: 100vh;
     }
-
     .video-background {
       position: absolute;
-      top: 0; left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       z-index: -1;
     }
-
     .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
       background: rgba(0, 0, 0, 0.5);
       color: white;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
-      box-sizing: border-box;
     }
-
     h1, p {
       margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cakes.html">Cakes</a></li>
-      <li><a href="icecreams.html">Ice Creams</a></li>
-      <li><a href="reservations.html">Reservations</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
-  </nav>
-
+  <nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cakes.html">Cakes</a></li>
+    <li><a href="icecreams.html">Ice Creams</a></li>
+    <li><a href="reservations.html">Reservations</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+</nav>
   <section class="hero">
-    <video class="video-background" autoplay muted loop aria-hidden="true" playsinline>
-      <source src="contact-video.mp4" type="video/mp4" />
-      <!-- Fallback text -->
-      Your browser does not support the video tag.
+    <video class="video-background" autoplay muted loop>
+      <source src="contact-video.mp4" type="video/mp4">
     </video>
     <div class="overlay">
       <div>
@@ -113,3 +101,5 @@
   </section>
 </body>
 </html>
+
+
