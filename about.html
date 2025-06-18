@@ -1,108 +1,36 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Dolcidea</title>
-   <!-- Google Fonts for a fancier font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolcidea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #f5f5f5;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #d4af37;
-}
-
-body {
-  padding-top: 80px; /* To prevent navbar from overlapping content */
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  background: #f5f5f5;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .hero {
-      display: flex;
-      height: 100vh;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-    .hero img {
-      width: 50%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-    .text {
-      width: 50%;
-      padding-right: 2rem;
-    }
-   h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-align: center;
+
+    html, body {
+      height: 100%;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f5f5f5;
       color: #2f2f2f;
-      text-shadow:
-        -1px -1px 0 #d4af37,
-         1px -1px 0 #d4af37,
-        -1px  1px 0 #d4af37,
-         1px  1px 0 #d4af37;
-      user-select: none;
+      scroll-behavior: smooth;
     }
-  </style>
-</head>
-<body>
-  <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="cakes.html">Cakes</a></li>
-    <li><a href="icecreams.html">Ice Creams</a></li>
-    <li><a href="reservations.html">Reservations</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About Us</a></li>
-  </ul>
-</nav>
-  <section class="hero">
-    <div class="text">
-      <h1>About Dolcidea</h1>
-      <p>Welcome to Dolcidea, your sweet escape into the world of authentic Italian gelato. At Dolcidea, we believe that every scoop tells a story — a story
-        of passion, tradition, and the finest ingredients lovingly transformed into creamy masterpieces. Located in the heart of the city, Dolcidea offers
-        a warm and inviting atmosphere where gelato lovers can indulge in an unforgettable sensory experience. Our gelato is handcrafted daily using traditional
-        Italian recipes combined with the freshest local and imported ingredients. From classic favorites like creamy vanilla and intense chocolate to vibrant
-        fruit sorbets and innovative seasonal flavors, each batch is made in small quantities to ensure peak freshness and flavor.
-        At Dolcidea, quality is our promise: we use natural ingredients with no artificial colors or preservatives, allowing the true essence of each flavor
-        to shine through. Complement your gelato with our crispy, freshly made waffle cones or try our delightful selection of toppings and accompaniments.
-        Whether you’re enjoying a casual treat, celebrating with friends, or discovering new flavors, Dolcidea invites you to experience the magic of 
-        Italian gelato craftsmanship. Come visit us and taste the sweetness of tradition, passion, and creativity — only at Dolcidea.</p>
-    </div>
-    <img src="shop.jpg" alt="Gelateria Interior">
-  </section>
-</body>
-</html>
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    nav ul {
+      d
