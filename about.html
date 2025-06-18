@@ -7,7 +7,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Navbar styles */
+    /* Navbar styles copied from cakes.html */
     .navbar {
       position: fixed;
       top: 0;
@@ -36,8 +36,7 @@
       transition: color 0.3s ease;
     }
 
-    .navbar ul li a:hover,
-    .navbar ul li a[aria-current="page"] {
+    .navbar ul li a:hover {
       color: #d4af37;
     }
 
@@ -49,7 +48,6 @@
       padding-left: 2rem;
       padding-right: 2rem;
       padding-bottom: 2rem;
-      color: #333;
     }
 
     /* Hero section styles */
@@ -67,7 +65,6 @@
       border-radius: 10px;
       object-fit: cover;
       max-height: 500px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .text {
@@ -91,8 +88,7 @@
     p {
       font-size: 1.1rem;
       line-height: 1.5;
-      margin: 0;
-      white-space: pre-wrap; /* keep line breaks if any */
+      color: #333;
     }
 
     /* Responsive adjustments */
@@ -116,14 +112,14 @@
   </style>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="Primary navigation">
+  <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="cakes.html">Cakes</a></li>
       <li><a href="icecreams.html">Ice Creams</a></li>
       <li><a href="reservations.html">Reservations</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html" aria-current="page">About Us</a></li>
+      <li><a href="about.html">About Us</a></li>
     </ul>
   </nav>
 
