@@ -1,69 +1,80 @@
-<!-- cakes.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cakes - Dolcidea</title>
-<!-- Google Fonts -->
-
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-  #bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  opacity: 0.4; /* Adjust for desired visibility */
-}
-    .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar ul li a {
-  text-decoration: none;
-  color: #f5f5f5;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #d4af37;
-}
-
-body {
-  padding-top: 80px; /* To prevent navbar from overlapping content */
-}
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Quicksand', sans-serif;
       background-color: rgba(255, 255, 255, 0.3);
       margin: 0;
       padding: 2rem;
+      padding-top: 80px; /* to avoid navbar overlap */
+      color: #2f2f2f;
+      min-height: 100vh;
+      position: relative;
+      z-index: 0;
     }
 
+    /* Background video */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.4; /* adjust transparency */
+      pointer-events: none; /* so it doesn't interfere with clicks */
+    }
 
-    /* New h1 styling with gold outline and fancy font */
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #f5f5f5;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+      color: #d4af37;
+    }
+
+    /* Headings */
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 4rem;
@@ -77,20 +88,26 @@ body {
          1px  1px 0 #d4af37;
       user-select: none;
     }
+
     h2 {
-  margin-bottom: 0.5rem;
-  text-shadow:
-    -1px -1px 0 #d4af37,
-     1px -1px 0 #d4af37,
-    -1px  1px 0 #d4af37,
-     1px  1px 0 #d4af37;
-}
+      margin-bottom: 0.5rem;
+      text-shadow:
+        -1px -1px 0 #d4af37,
+         1px -1px 0 #d4af37,
+        -1px  1px 0 #d4af37,
+         1px  1px 0 #d4af37;
+    }
+
+    /* Menu Section */
     .menu-section {
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
       justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
     .menu-item {
       display: flex;
       background: white;
@@ -98,14 +115,23 @@ body {
       max-width: 800px;
       border-radius: 12px;
       overflow: hidden;
+      width: 100%;
+      flex: 1 1 400px;
+      align-items: center;
     }
+
+    /* Alternate flex-direction for even items */
     .menu-item:nth-child(even) {
       flex-direction: row-reverse;
     }
+
     .menu-img {
       width: 50%;
+      height: 100%;
       object-fit: cover;
+      border-radius: 0;
     }
+
     .menu-desc {
       padding: 1.5rem;
       display: flex;
@@ -113,30 +139,74 @@ body {
       justify-content: center;
       width: 50%;
     }
-    h2 {
-      margin-bottom: 0.5rem;
+
+    /* Responsive for smaller screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+        padding: 0 1rem;
+      }
+      .navbar ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .navbar ul li a {
+        font-size: 1.3rem;
+      }
+      .menu-item {
+        flex-direction: column !important;
+        max-width: 100%;
+      }
+      .menu-img, .menu-desc {
+        width: 100% !important;
+      }
+      .menu-img {
+        height: 250px;
+      }
+      body {
+        padding: 1rem 1rem 2rem;
+        padding-top: 90px; /* for navbar */
+      }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .menu-img {
+        height: 180px;
+      }
+      .menu-desc {
+        padding: 1rem;
+      }
+      .navbar ul li a {
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop id="bg-video">
-  <source src="baking.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+  <video autoplay muted loop id="bg-video" playsinline>
+    <source src="baking.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
   <nav class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="cakes.html">Cakes</a></li>
-    <li><a href="icecreams.html">Ice Creams</a></li>
-    <li><a href="reservations.html">Reservations</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="about.html">About Us</a></li>
-  </ul>
-</nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cakes.html">Cakes</a></li>
+      <li><a href="icecreams.html">Ice Creams</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </nav>
+
   <h1>Cakes Menu</h1>
+
   <section class="menu-section">
     <div class="menu-item">
-      <img class="menu-img" src="Strawberry_Cake.jpg" alt="Cake 1">
+      <img class="menu-img" src="Strawberry_Cake.jpg" alt="Elegant Strawberry Cake" />
       <div class="menu-desc">
         <h2>Elegant Strawberry Cake</h2>
         <p>Indulge in the sweet delight of our Fresh Strawberry Cake, a perfect blend of light, fluffy sponge layered with luscious whipped cream and juicy,
@@ -146,8 +216,9 @@ body {
           Strawberry Cake.</p>
       </div>
     </div>
+
     <div class="menu-item">
-      <img class="menu-img" src="Chocolate_Cake.jpg" alt="Cake 2">
+      <img class="menu-img" src="Chocolate_Cake.jpg" alt="Chocolate Fantasy" />
       <div class="menu-desc">
         <h2>Chocolate Fantasy</h2>
         <p>Dive into decadence with our rich, velvety Chocolate Cake, crafted for true chocolate lovers. This moist, tender cake is layered with smooth,
@@ -157,8 +228,9 @@ body {
           for anyone craving a luxurious chocolate escape.</p>
       </div>
     </div>
+
     <div class="menu-item">
-      <img class="menu-img" src="Lemon_Cake.jpg" alt="Cake 1">
+      <img class="menu-img" src="Lemon_Cake.jpg" alt="Lemon Cake" />
       <div class="menu-desc">
         <h2>Lemon Cake</h2>
         <p>Bright, zesty, and refreshingly light — our Lemon Cake is the perfect balance of sweet and citrusy. Made with fresh lemon juice and zest,
@@ -166,19 +238,19 @@ body {
           vibrant character while keeping it delightfully soft. Whether enjoyed with a cup of tea or as a sunny treat on a warm day, this cake brings
           a cheerful twist to any occasion. Its delicate aroma and elegant look make it as irresistible as it is uplifting.</p>
       </div>
-      </div>
-      <div class="menu-item">
-      <img class="menu-img" src="Red_Velvet_Cake.jpg" alt="Cake 1">
+    </div>
+
+    <div class="menu-item">
+      <img class="menu-img" src="Red_Velvet_Cake.jpg" alt="Red Velvet Cake" />
       <div class="menu-desc">
         <h2>Red Velvet Cake</h2>
         <p>Elegant, rich, and irresistibly smooth — our Red Velvet Cake is a timeless classic. With its striking red hue and subtle cocoa flavor,
           this cake is layered with a luscious cream cheese frosting that adds the perfect hint of tang. The velvety texture and balanced sweetness
           make it a sophisticated choice for birthdays, anniversaries, or any moment worth celebrating. Crafted with care and high-quality ingredients,
           every slice is as beautiful as it is delicious. Whether you're indulging yourself or sharing with someone special, our Red Velvet Cake offers
-          a luxurious experience with every bite..</p>
+          a luxurious experience with every bite.</p>
       </div>
-        </div>
-    <!-- Add more items as needed -->
+    </div>
   </section>
 </body>
 </html>
