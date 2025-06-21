@@ -57,7 +57,7 @@ body {
 
     body {
       font-family: 'Quicksand', sans-serif;
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0.3);
       margin: 0;
       padding: 2rem;
     }
@@ -93,7 +93,7 @@ body {
     }
     .menu-item {
       display: flex;
-      background: white;
+      /*background: white;*/
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       max-width: 800px;
       border-radius: 12px;
@@ -123,6 +123,10 @@ body {
   <source src="baking.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
+
+  <div style="position: fixed; inset: 0; z-index: 1; background: transparent;"></div>
+
+  
   <nav class="navbar">
   <ul>
     <li><a href="index.html">Home</a></li>
